@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Currency Exchange</title>
+</head>
+<body>
+<h1>Currency Exchange Rates</h1>
+<table>
+    <tr>
+        <th>Currency</th>
+        <th>Rate</th>
+    </tr>
+    <tr th:each="rate : ${rates}">
+        <td th:text="${rate.key}"></td>
+        <td th:text="${rate.value}"></td>
+    </tr>
+</table>
+</body>
+</html>
