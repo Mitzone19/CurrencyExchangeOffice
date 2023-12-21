@@ -4,8 +4,27 @@
     <title>Currency Exchange</title>
 </head>
 <body>
-<h1>Currency Exchange Rates</h1>
-<table>
+<h1 style="text-align: center;">Currency Converter</h1>
+<form  style="text-align: center;" action="/convert" method="post">
+    <label>Amount:</label>
+    <input type="number" name="amount" min="0" step="any" required /><br>
+
+    <label>From Currency:</label>
+    <select name="fromCurrency">
+        <option value="RON">RON</option> <!-- Manually adding RON -->
+        <option th:each="rate : ${rates}" th:value="${rate.key}" th:text="${rate.key}"></option>
+    </select><br>
+
+    <label>To Currency:</label>
+    <select name="toCurrency">
+        <option value="RON">RON</option> <!-- Manually adding RON -->
+        <option th:each="rate : ${rates}" th:value="${rate.key}" th:text="${rate.key}"></option>
+    </select><br>
+
+    <input type="submit" value="Convert">
+</form>
+<h2 style="text-align: center;">Today's rates for 1 RON</h2>
+<table style="margin:auto;">
     <tr>
         <th>Currency</th>
         <th>Rate</th>

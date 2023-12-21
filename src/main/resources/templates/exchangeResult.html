@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Conversion Result</title>
+</head>
+<body>
+<h1 style="text-align: center;">Conversion Result</h1>
+<p style="text-align: center;font-weight: bold;font-size: xx-large;" th:text="${amount} + ' ' + ${fromCurrency} + ' is equal to ' + ${convertedAmount} + ' ' + ${toCurrency}"></p>
+<a style="text-align: center;display: block;" href="/">Convert another amount</a>
+
+<h2 style="text-align: center;">Today's rates for 1 RON</h2>
+<table style="margin:auto;">
+    <tr>
+        <th>Currency</th>
+        <th>Rate</th>
+    </tr>
+    <tr th:each="rate : ${rates}">
+        <td th:text="${rate.key}"></td>
+        <td th:text="${rate.value}"></td>
+    </tr>
+</table>
+</body>
+</html>
