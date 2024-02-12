@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Currency Exchange</title>
+    <title>Exchange Office</title>
+    <style>
+        body {
+            background: radial-gradient(transparent, #8affb9);
+        }
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            font-size: xxx-large;
+        }
+        form {
+            text-align: center;
+        }
+        label, input, select {
+            font-family: cursive;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+        }
+    </style>
 </head>
 <body>
-<h1 style="text-align: center;">Currency Converter</h1>
-<form  style="text-align: center;" action="/convert" method="post">
+<h1>Exchange Office</h1>
+<table>
+    <th style="
+    vertical-align: top;
+    padding-right: 100px;
+    padding-left: 75px;
+    padding-top: 50px;
+">
+<form action="/convert" method="post">
     <label>Amount:</label>
     <input type="number" name="amount" min="0" step="any" required /><br>
 
@@ -23,16 +56,20 @@
 
     <input type="submit" value="Convert">
 </form>
+    </th>
+    <th style="border: 1px solid white;">
 <h2 style="text-align: center;">Today's rates for 1 RON</h2>
-<table style="margin:auto;">
+<table>
     <tr>
         <th>Currency</th>
         <th>Rate</th>
     </tr>
-    <tr th:each="rate : ${rates}">
+    <tr th:each="rate : ${rates}" style="background-color: #f2f2f2;border: 1px solid black;">
         <td th:text="${rate.key}"></td>
         <td th:text="${rate.value}"></td>
     </tr>
+</table>
+    </th>
 </table>
 </body>
 </html>

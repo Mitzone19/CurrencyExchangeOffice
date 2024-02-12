@@ -2,11 +2,39 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Conversion Result</title>
+    <style>
+        body {
+            background: radial-gradient(transparent, #8affb9);
+        }
+        h1 {
+            text-align: center;
+            font-family: cursive;
+            font-size: xxx-large;
+        }
+        form {
+            text-align: center;
+        }
+        label, input, select {
+            font-family: cursive;
+        }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
-<body>
-<h1 style="text-align: center;">Conversion Result</h1>
-<p style="text-align: center;font-weight: bold;font-size: xx-large;" th:text="${amount} + ' ' + ${fromCurrency} + ' is equal to ' + ${convertedAmount} + ' ' + ${toCurrency}"></p>
-<a style="text-align: center;display: block;" href="/">Convert another amount</a>
+<body style="background: radial-gradient(transparent, #8affb9);">
+<h1 style="text-align: center;font-family: cursive;font-size: xxx-large;">Conversion Result</h1>
+<p style="text-align: center;font-weight: bold;font-size: xx-large;font-family: cursive" th:text="${amount} + ' ' + ${fromCurrency} + ' is equal to ' + ${convertedAmount} + ' ' + ${toCurrency}"></p>
+<a style="text-align: center;display: block;font-family: cursive" href="/">Convert another amount</a>
 
 <h2 style="text-align: center;">Today's rates for 1 RON</h2>
 <table style="margin:auto;">
