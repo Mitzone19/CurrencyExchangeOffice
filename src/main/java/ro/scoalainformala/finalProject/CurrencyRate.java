@@ -11,8 +11,6 @@ public class CurrencyRate {
     private String currency;
     private Double rate;
 
-    // Getters and setters
-
     public String getCurrency() {
         return currency;
     }

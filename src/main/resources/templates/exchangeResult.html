@@ -3,9 +3,7 @@
 <head>
     <title>Conversion Result</title>
     <style>
-        body {
-            background: radial-gradient(transparent, #8affb9);
-        }
+
         h1 {
             text-align: center;
             font-family: cursive;
@@ -31,7 +29,7 @@
         }
     </style>
 </head>
-<body style="background: radial-gradient(transparent, #8affb9);">
+<body>
 <h1 style="text-align: center;font-family: cursive;font-size: xxx-large;">Conversion Result</h1>
 <p style="text-align: center;font-weight: bold;font-size: xx-large;font-family: cursive" th:text="${amount} + ' ' + ${fromCurrency} + ' is equal to ' + ${convertedAmount} + ' ' + ${toCurrency}"></p>
 <a style="text-align: center;display: block;font-family: cursive" href="/">Convert another amount</a>
